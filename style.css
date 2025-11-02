@@ -1,8 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   background: #150015;
@@ -11,59 +7,43 @@ body {
   text-align: center;
   min-height: 100vh;
   overflow-x: hidden;
-  padding-bottom: 120px; /* alttaki şeride yer kalsın */
+  padding-bottom: 110px;
 }
 
-.container {
-  margin-top: 40px;
+/* HIDDEN ÇALIŞSIN DİYE */
+.modal[hidden] {
+  display: none !important;
 }
+
+.container { margin-top: 40px; position: relative; z-index: 2; }
 
 .quote {
   font-style: italic;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.5;
-  color: #ffe1ec;
 }
-
-.quote span {
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
-
 .title {
   font-size: 2.4rem;
-  margin-bottom: 0.8rem;
-  font-family: "Great Vibes", cursive;
+  margin-bottom: 0.5rem;
   color: #ffb6c1;
+  font-family: "Great Vibes", cursive;
 }
-
-.countdown {
-  margin-bottom: 1.2rem;
-  font-weight: 500;
-}
+.countdown { margin-bottom: 1rem; }
 
 /* ARKA PLAN EMOJİLERİ */
 .emoji-wall {
   position: fixed;
   inset: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 2rem;
-  opacity: 0.15;
+  opacity: 0.12;
   pointer-events: none;
   z-index: 0;
 }
-.emoji-wall span {
-  font-size: 2.3rem;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
-}
+.emoji-wall span { font-size: 2.3rem; }
 
 /* ŞARKI BUTONU */
-.buttons {
-  position: relative;
-  z-index: 2;
-}
 #playBtn {
   background: #ff6298;
   border: none;
@@ -74,29 +54,26 @@ body {
   box-shadow: 0 0 15px rgba(255, 98, 152, 0.5);
   transition: 0.3s;
 }
-#playBtn:hover {
-  transform: scale(1.03);
-}
+#playBtn:hover { transform: scale(1.03); }
 
-/* MÜZİK PLAYER */
+/* PLAYER */
 .music-player {
-  margin-top: 1.2rem;
-  background: #00000055;
+  margin-top: 1rem;
+  background: #00000033;
   border-radius: 999px;
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 
 /* FOTOĞRAF ŞERİDİ */
 .song-visual {
   position: fixed;
-  bottom: 0;
-  left: 0;
+  bottom: 0; left: 0;
   width: 100%;
   background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
   padding: 10px 0;
   z-index: 90;
-  backdrop-filter: blur(4px);
 }
 .sv-track {
   display: flex;
@@ -111,12 +88,10 @@ body {
   object-fit: cover;
   border-radius: 18px;
   border: 3px solid rgba(255, 182, 193, 0.5);
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
-
 @keyframes slidePhotos {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to   { transform: translateX(-50%); }
 }
 
 /* SAĞ ALTTAN BUTONLAR */
@@ -125,18 +100,18 @@ body {
   right: 1rem;
   bottom: 1rem;
   background: orange;
+  color: #fff;
   border: none;
   border-radius: 25px;
   padding: 9px 20px;
   font-size: 0.9rem;
-  color: #fff;
+  z-index: 200;
   box-shadow: 0 0 12px rgba(0,0,0,0.4);
-  z-index: 200; /* fotoğraf şeridinin üstünde */
 }
 .letter-btn.final-btn {
-  bottom: 4.9rem;
+  bottom: 4.8rem;
   background: radial-gradient(circle, #ff7eb9 0%, #ff477e 50%, #ff165d 100%);
-  box-shadow: 0 0 20px rgba(255, 71, 126, 0.6);
+  box-shadow: 0 0 20px rgba(255,71,126,0.6);
 }
 
 /* MODAL GENEL */
@@ -166,35 +141,37 @@ body {
   cursor: pointer;
   color: #b00000;
 }
+.close:hover { color: red; }
 
-/* MEKTUP İÇİ */
+/* MEKTUP MODALI ÖZEL */
+.letter-content {
+  background: transparent;
+  box-shadow: none;
+  max-width: 420px;
+}
 .letter-bg {
   width: 100%;
-  border-radius: 10px;
-  opacity: 0.9;
+  display: block;
 }
 .letter-text {
   position: absolute;
-  inset: 60px 45px 40px 45px;
+  inset: 70px 45px 45px 45px;
   text-align: left;
-  color: #3b0606;
-  line-height: 1.5;
+  color: #2f0606;
+  line-height: 1.4;
+  font-size: 0.95rem;
 }
 
 /* EVLENME TEKLİFİ MODALI */
 .proposal-content {
-  background-image: url("assets/mektup_kagit.png");
-  background-size: cover;
-  background-position: center;
+  background: rgba(34,12,20,0.98);
+  color: #ffe7ed;
   text-align: center;
-  color: #4b0b1b;
-  border: 3px solid rgba(255,182,193,0.7);
+  border: 2px solid rgba(255,182,193,0.6);
 }
-
 .proposal-content h2 {
-  color: #8b0011;
   margin-bottom: 1rem;
-  text-shadow: 0 0 15px rgba(255,203,210,0.7);
+  text-shadow: 0 0 12px rgba(255,203,210,0.7);
 }
 
 /* UÇAN KALPLER */
@@ -203,16 +180,9 @@ body {
   font-size: 2.2rem;
   animation: rise 4s linear forwards;
   pointer-events: none;
-  z-index: 400;
+  z-index: 1000;
 }
 @keyframes rise {
   0% { transform: translateY(0) scale(1); opacity: 1; }
   100% { transform: translateY(-100vh) scale(0.4); opacity: 0; }
-}
-
-/* MOBİL */
-@media (max-width: 700px) {
-  .title { font-size: 1.8rem; }
-  .sv-track img { width: 90px; height: 100px; }
-  .letter-text { inset: 55px 25px 35px 25px; }
 }
