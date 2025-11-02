@@ -149,3 +149,26 @@ body {
   .sv-track img{width:130px; height:105px;}
   .letter-paper{width:94vw;}
 }
+.proposal-box {
+  margin-top: 30px;
+  padding: 20px 40px;
+  background: rgba(255, 192, 203, 0.15);
+  border: 2px solid pink;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.5);
+  color: #ffb6c1;
+  font-size: 1.8rem;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff7eb9, 0 0 20px #ff758c, 0 0 30px #ffb6c1;
+  }
+  to {
+    text-shadow: 0 0 20px #ffb6c1, 0 0 30px #ff7eb9, 0 0 40px #ffc0cb;
+  }
+}
+
