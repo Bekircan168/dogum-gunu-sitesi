@@ -3,108 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doğum Günün Kutlu Olsun İki Gözümün Çiçeği Şükran’ım ❤️</title>
+  <title>Doğum Günün Kutlu Olsun İki Gözümün Çiçeği Şükran’ım 💐</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- SABİT EMOJİ ARKA PLAN -->
+  <!-- Sabit emoji arka plan -->
   <div class="emoji-wall" aria-hidden="true">
-    <!-- 6x5 = 30 tane emoji yerleştirdim, istersen çoğalt -->
     <span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span>
-    <span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span>
-    <span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span>
-    <span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span>
-    <span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span>
   </div>
 
   <div class="container">
     <h2 class="quote">“Sana gitme demeyeceğim,<br> Ama gitme Lavinia.”<br><span>— Özdemir Asaf</span></h2>
-    <h1 class="title">Doğum Günün Kutlu Olsun Şükran’ım 🌸</h1>
+    <h1 class="title">Doğum Günün Kutlu Olsun İki Gözümün Çiçeği Şükran’ım 🌸</h1>
 
     <div class="countdown" id="countdown">00 Gün 00 Saat 00 Dakika 00 Saniye</div>
 
     <div class="buttons">
-      <button id="playBtn">🎵 Şarkımızı Çal</button>	
+      <button id="playBtn">🎵 Şarkımızı Çal</button>
     </div>
-	<div class="proposal-box">
-  		<p>💍 Benimle evlenir misin, Şükran’ım? 💕</p>
-	</div>
-
   </div>
 
-  <!-- müzik -->
-<audio id="music" controls style="margin-top:1rem; background:#00000022; border-radius:8px;">
-  <source src="https://raw.githubusercontent.com/Bekircan168/dogum-gunu-sitesi/main/assets/iki-gozumun-cicegi.mp3" type="audio/mpeg">
-  Tarayıcın müziği otomatik çalmadıysa buradan başlatabilirsin ❤️
-</audio>
+  <!-- Müzik -->
+  <audio id="music" controls style="margin-top:1rem;background:#00000022;border-radius:8px;">
+    <source src="assets/iki-gozumun-cicegi.mp3" type="audio/mpeg">
+    Tarayıcı müziği otomatik çalamadıysa buradan başlatabilirsin ❤️
+  </audio>
 
-
-
+  <!-- Fotoğraflar -->
   <div id="song-visual" class="song-visual hidden">
     <div class="sv-track" id="svTrack">
-      <img src="assets/ilk_bulusmamiz.jpg" alt="">
-      <img src="assets/dogum_gunu_notu.jpg" alt="">
-      <img src="assets/kirmizi_pasta.jpg" alt="">
-      <img src="assets/biz_1.jpg" alt="">
-      <img src="assets/el_optme.jpg" alt="">
-      <img src="assets/davette_biz.jpg" alt="">
-      <img src="assets/ilk_bulusmamiz.jpg" alt="">
-      <img src="assets/dogum_gunu_notu.jpg" alt="">
-      <img src="assets/kirmizi_pasta.jpg" alt="">
-      <img src="assets/biz_1.jpg" alt="">
-      <img src="assets/el_optme.jpg" alt="">
-      <img src="assets/davette_biz.jpg" alt="">
+      <img src="assets/ilk_bulusmamiz.jpg">
+      <img src="assets/dogum_gunu_notu.jpg">
+      <img src="assets/kirmizi_pasta.jpg">
+      <img src="assets/biz_1.jpg">
+      <img src="assets/el_optme.jpg">
+      <img src="assets/davette_biz.jpg">
     </div>
   </div>
 
-  <!-- mektup simgesi -->
-  <button class="letter-btn" id="openLetter" title="Mektubu aç">
+  <!-- Butonlar -->
+  <button class="letter-btn" id="openLetter" title="Mektubu aç">🔥 Mektup</button>
   <button class="letter-btn final-btn" id="openProposal" title="En son tıkla">💖 En son tıkla</button>
 
-    <span class="fire">🔥</span>
-    <span class="text">Mektup</span>
-  </button>
-
-  <!-- mektup -->
-  <div class="letter-modal" id="letterModal" hidden>
-    <div class="letter-paper">
-      <button class="close-letter" id="closeLetter">×</button>
-      <p id="letterContent">
-        Ey gönlümün sultanı, iki gözümün nuru Şükran’ım,<br><br>
-        Bu satırları yazarken kalemim titrer, kelimeler dahi utanır senden bahsetmeye.<br>
-	Hangi kelimeyi kullansam eksik kalır seni anlatmaya .<br>
-        Zira sen, gönül tahtımda hükmeden bir sultan, <i>kalb-i dilimde</i> açan tek çiçeksin.<br>
-        Her sabah ismini anmak, bir dua gibi düşer dilime. Her akşam, sesini duymadan kapanmaz gecem.<br><br>
-        Gözlerin ki, <i>bahr-i nurdur</i> — baktıkça insan kaybolur, bulsa da kendini sende bulur.<br>
-        Gülüşün, gönlümde yanan bin kandil gibi; her biri, seni düşündükçe ışıldar, seni sevdikçe çoğalır.<br><br>
-        Sen geldin, zaman yavaşladı. Rüzgârın sesi bile başka esti o gün.Güneş bile utandı kendinden.<br>
-        Ben o günden beri anladım ki, ömrümün anlamı bir isimde saklıymış: <b>Şükran ÇÜCÜK </b>.<br><br>
-        Doğum günün kutlu olsun sevgilim ; iyi ki doğdun, iyi ki bu kalbin sahibesi oldun.<br>
-	Seni çok seviyorum başımın belası maraşlı.<br>
-        Bu küçük hediye, gönlümde taşıdığım sevdanın sadece bir yankısıdır.<br><br>
-        Kalbimin en sessiz ve derin köşesinden,<br>
-		      
-      </p>
+  <!-- Mektup Modal -->
+  <div id="letterModal" class="modal" hidden>
+    <div class="modal-content">
+      <span class="close" id="closeLetter">&times;</span>
+      <img src="assets/mektup_kagit.png" alt="Mektup Kağıdı" class="letter-bg">
+      <p class="letter-text">Canım Şükran, doğum günün kutlu olsun. Seninle geçen her günüm
+      daha güzel. 🎂 💞</p>
     </div>
   </div>
-	<!-- EVLENME TEKLİFİ MODALI -->
-<div id="proposalModal" class="modal" hidden>
-  <div class="modal-content proposal-content">
-    <span class="close" id="closeProposal">&times;</span>
-    <h2>💍 Benimle evlenir misin, Şükran’ım? 💕</h2>
-    <p>Bu siteyi senin için yaptım... çünkü kalbim seninle çok güzel. Hep böyle olsun isterim. 💖</p>
-    <p>“Evet” dersen… bütün şarkılar daha güzel çalar 🎶</p>
-    <div id="heart-burst"></div>
+
+  <!-- Evlenme Teklifi Modal -->
+  <div id="proposalModal" class="modal" hidden>
+    <div class="modal-content proposal-content">
+      <span class="close" id="closeProposal">&times;</span>
+      <h2>💍 Benimle evlenir misin Şükran’ım? 💕</h2>
+      <p>Bu siteyi senin için yaptım... Kalbim her zaman seninle. ❤️</p>
+      <div id="heart-burst"></div>
+    </div>
   </div>
-</div>
-
-
-  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
