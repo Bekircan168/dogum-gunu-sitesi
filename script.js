@@ -59,3 +59,43 @@ closeLetter.addEventListener('click', () => {
 letterModal.addEventListener('click', (e) => {
   if (e.target === letterModal) letterModal.setAttribute('hidden','');
 });
+// ======================
+// 3) EVLENME TEKLİFİ MODALI
+// ======================
+const openProposal = document.getElementById("openProposal");
+const proposalModal = document.getElementById("proposalModal");
+const closeProposal = document.getElementById("closeProposal");
+
+if (openProposal && proposalModal) {
+  openProposal.addEventListener("click", () => {
+    proposalModal.hidden = false;
+
+    // kalp yağdır
+    for (let i = 0; i < 25; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("floating-heart");
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+  });
+}
+
+if (closeProposal && proposalModal) {
+  closeProposal.addEventListener("click", () => {
+    proposalModal.hidden = true;
+  });
+}
+
+// modalın dışına tıklayınca kapat
+if (proposalModal) {
+  proposalModal.addEventListener("click", (e) => {
+    if (e.target === proposalModal) {
+      proposalModal.hidden = true;
+    }
+  });
+}
+
+
