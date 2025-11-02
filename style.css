@@ -1,218 +1,109 @@
 body {
-  margin: 0;
-  font-family: "Times New Roman", serif;
-  background: radial-gradient(circle at top, #160010, #050006);
-  color: #fff;
+  background: #1a001a;
+  color: #ffd6e0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
-.container {
-  text-align: center;
-  padding: 60px 15px 140px;
-  position: relative;
-  z-index: 2;
+/* Emoji arka plan */
+.emoji-wall span {
+  font-size: 2rem;
+  margin: 0.5rem;
+  opacity: 0.3;
 }
 
-.title {
-  font-size: 2.7rem;
-  color: #ffb6c1;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, .3);
-}
-.quote {
-  font-style: italic;
-  opacity: .9;
-  line-height: 1.5;
-}
-.quote span { font-size: .8rem; opacity: .6; }
-
-.buttons button {
-  background-color: #ff80aa;
-  border: none;
-  color: #fff;
-  padding: 10px 26px;
-  margin: 16px 8px 0;
-  border-radius: 12px;
+/* Butonlar */
+button {
   cursor: pointer;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
   font-size: 1rem;
-  box-shadow: 0 4px 25px rgba(255, 128, 170, .5);
+  color: white;
+  background: #ff6298;
+  box-shadow: 0 0 15px rgba(255,98,152,0.5);
+  transition: 0.3s;
 }
+button:hover { transform: scale(1.05); }
 
-/* 📌 SABİT EMOJİ ARKA PLAN */
-.emoji-wall{
+/* Alt köşe butonları */
+.letter-btn {
   position: fixed;
-  inset: 0;
-  z-index: 0;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 130px;
-  justify-items: center;
-  align-items: center;
-  pointer-events: none;
-  opacity: .25;           /* istersen .35 yap */
-  filter: drop-shadow(0 0 6px rgba(0,0,0,.6));
+  right: 1rem;
+  bottom: 1rem;
+  background: orange;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(255,165,0,0.6);
 }
-.emoji-wall span{
-  font-size: clamp(40px, 4vw, 56px);
-}
-
-/* alttaki foto şeridi */
-.song-visual{
-  position:fixed;
-  left:50%;
-  bottom:8px;
-  transform:translateX(-50%);
-  width:min(1200px, 96vw);
-  background:rgba(0, 0, 0, .55);
-  border-radius:20px;
-  backdrop-filter:blur(10px);
-  padding:10px 4px;
-  z-index:40;
-  overflow:hidden;
-}
-.song-visual.hidden{display:none;}
-.sv-track{
-  display:flex;
-  gap:12px;
-  animation:scroll 15s linear infinite;
-}
-@keyframes scroll{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
-}
-.sv-track img{
-  width:180px;
-  height:140px;
-  object-fit:cover;
-  border-radius:16px;
-  border:1px solid rgba(255,255,255,.18);
-  box-shadow:0 4px 15px rgba(0,0,0,.4);
-}
-
-/* mektup butonu */
-.letter-btn{
-  position:fixed;
-  bottom:165px;
-  right:16px;
-  background:radial-gradient(circle, #ffead7 0%, #c05b3a 90%);
-  border-radius:14px;
-  padding:10px 14px;
-  display:flex;
-  gap:8px;
-  align-items:center;
-  cursor:pointer;
-  z-index:50;
-  color:#4f200c;
-  font-weight:bold;
-}
-
-/* mektup modal */
-.letter-modal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.65);
-  display:grid;
-  place-items:center;
-  z-index:200;
-}
-.letter-modal[hidden]{display:none;}
-
-/* 🔥 senin verdiğin kağıt */
-.letter-paper{
-  background:url("assets/mektup_kagit.png") center/cover no-repeat;
-  width:min(880px, 95vw);
-  max-height:90vh;
-  overflow-y:auto;
-  border-radius:10px;
-  padding:2.2rem 2rem;
-  position:relative;
-  box-shadow:0 30px 60px rgba(0, 0, 0, .6);
-  font-family:'Dancing Script', cursive;
-  color:#3a1e0d;
-  font-size:1.6rem;
-  line-height:1.9;
-  text-shadow:0 1px 0 rgba(255,255,255,.3);
-}
-.close-letter{
-  position:absolute;
-  right:12px;
-  top:6px;
-  font-size:2rem;
-  background:transparent;
-  border:none;
-  cursor:pointer;
-  color:#3b2a27;
-}
-
-@media (max-width:700px){
-  .emoji-wall{grid-template-columns: repeat(4, 1fr);}
-  .sv-track img{width:130px; height:105px;}
-  .letter-paper{width:94vw;}
-}
-.proposal-box {
-  margin-top: 30px;
-  padding: 20px 40px;
-  background: rgba(255, 192, 203, 0.15);
-  border: 2px solid pink;
-  border-radius: 15px;
-  box-shadow: 0 0 25px rgba(255, 182, 193, 0.5);
-  color: #ffb6c1;
-  font-size: 1.8rem;
-  font-family: 'Great Vibes', cursive;
-  text-align: center;
-  animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #ff7eb9, 0 0 20px #ff758c, 0 0 30px #ffb6c1;
-  }
-  to {
-    text-shadow: 0 0 20px #ffb6c1, 0 0 30px #ff7eb9, 0 0 40px #ffc0cb;
-  }
-}
-/* en son tıkla butonu */
 .letter-btn.final-btn {
-  right: 1.2rem;
-  bottom: 5.5rem; /* mektup butonunun biraz üstü */
-  background: radial-gradient(circle, #ff7eb9 0%, #ff477e 50%, #ff165d 100%);
-  box-shadow: 0 0 20px rgba(255, 71, 126, 0.6);
+  bottom: 5.2rem;
+  background: radial-gradient(circle,#ff7eb9 0%,#ff477e 50%,#ff165d 100%);
+  box-shadow: 0 0 20px rgba(255,71,126,0.6);
 }
 
-/* evlenme teklifi modalı */
+/* Modal pencereler */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+.modal-content {
+  background: rgba(255,240,245,0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  color: #2a0a0a;
+  box-shadow: 0 0 25px rgba(255,192,203,0.8);
+}
+.modal-content img.letter-bg {
+  width: 100%;
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #700;
+}
+.close:hover { color: red; }
+
+/* Evlenme teklifi modalı */
 .proposal-content {
-  background: rgba(34, 12, 20, 0.95);
-  border: 3px solid rgba(255, 182, 193, 0.7);
+  background: rgba(34,12,20,0.95);
+  border: 3px solid rgba(255,182,193,0.7);
   background-image: url("assets/mektup_kagit.png");
   background-size: cover;
   background-position: center;
   color: #4b0b1b;
   text-align: center;
 }
-
 .proposal-content h2 {
   color: #8b0011;
-  text-shadow: 0 0 12px rgba(255, 203, 210, 0.7);
+  text-shadow: 0 0 12px rgba(255,203,210,0.7);
   margin-bottom: 1rem;
 }
 
-#heart-burst {
-  position: relative;
-  width: 100%;
-  height: 0;
-}
-
-/* uçan kalpler */
+/* Kalp animasyonu */
 .floating-heart {
   position: fixed;
   font-size: 2.2rem;
   animation: rise 4s linear forwards;
   pointer-events: none;
 }
-
 @keyframes rise {
   0% { transform: translateY(0) scale(1); opacity: 1; }
   100% { transform: translateY(-100vh) scale(0.4); opacity: 0; }
 }
-
-
