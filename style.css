@@ -171,4 +171,48 @@ body {
     text-shadow: 0 0 20px #ffb6c1, 0 0 30px #ff7eb9, 0 0 40px #ffc0cb;
   }
 }
+/* en son tıkla butonu */
+.letter-btn.final-btn {
+  right: 1.2rem;
+  bottom: 5.5rem; /* mektup butonunun biraz üstü */
+  background: radial-gradient(circle, #ff7eb9 0%, #ff477e 50%, #ff165d 100%);
+  box-shadow: 0 0 20px rgba(255, 71, 126, 0.6);
+}
+
+/* evlenme teklifi modalı */
+.proposal-content {
+  background: rgba(34, 12, 20, 0.95);
+  border: 3px solid rgba(255, 182, 193, 0.7);
+  background-image: url("assets/mektup_kagit.png");
+  background-size: cover;
+  background-position: center;
+  color: #4b0b1b;
+  text-align: center;
+}
+
+.proposal-content h2 {
+  color: #8b0011;
+  text-shadow: 0 0 12px rgba(255, 203, 210, 0.7);
+  margin-bottom: 1rem;
+}
+
+#heart-burst {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+/* uçan kalpler */
+.floating-heart {
+  position: fixed;
+  font-size: 2.2rem;
+  animation: rise 4s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-100vh) scale(0.4); opacity: 0; }
+}
+
 
