@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doğum Günün Kutlu Olsun İki Gözümün Çiçeği Şükran’ım 💐</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doğum Günün Kutlu Olsun Şükran’ım 💐</title>
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Sabit emoji arka plan -->
+  <!-- SABİT EMOJİ ARKA PLAN -->
   <div class="emoji-wall" aria-hidden="true">
+    <span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span>
+    <span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span>
     <span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span>
   </div>
 
   <div class="container">
-    <h2 class="quote">“Sana gitme demeyeceğim,<br> Ama gitme Lavinia.”<br><span>— Özdemir Asaf</span></h2>
-    <h1 class="title">Doğum Günün Kutlu Olsun İki Gözümün Çiçeği Şükran’ım 🌸</h1>
+    <h2 class="quote">
+      “Sana gitme demeyeceğim,<br /> Ama gitme Lavinia.”
+      <br /><span>— Özdemir Asaf</span>
+    </h2>
+    <h1 class="title">Doğum Günün Kutlu Olsun Şükran’ım 🌸</h1>
 
     <div class="countdown" id="countdown">00 Gün 00 Saat 00 Dakika 00 Saniye</div>
 
@@ -24,46 +29,61 @@
     </div>
   </div>
 
-  <!-- Müzik -->
-  <audio id="music" controls style="margin-top:1rem;background:#00000022;border-radius:8px;">
-    <source src="assets/iki-gozumun-cicegi.mp3" type="audio/mpeg">
-    Tarayıcı müziği otomatik çalamadıysa buradan başlatabilirsin ❤️
+  <!-- MÜZİK (raw linkle, çalışıyor olan) -->
+  <audio id="music" controls class="music-player">
+    <source src="https://raw.githubusercontent.com/Bekircan168/dogum-gunu-sitesi/main/assets/iki-gozumun-cicegi.mp3" type="audio/mpeg">
+    Tarayıcın müziği otomatik çalmadıysa buradan başlatabilirsin ❤️
   </audio>
 
-  <!-- Fotoğraflar -->
-  <div id="song-visual" class="song-visual hidden">
+  <!-- FOTOĞRAF ŞERİDİ -->
+  <div id="song-visual" class="song-visual">
     <div class="sv-track" id="svTrack">
-      <img src="assets/ilk_bulusmamiz.jpg">
-      <img src="assets/dogum_gunu_notu.jpg">
-      <img src="assets/kirmizi_pasta.jpg">
-      <img src="assets/biz_1.jpg">
-      <img src="assets/el_optme.jpg">
-      <img src="assets/davette_biz.jpg">
+      <img src="assets/ilk_bulusmamiz.jpg" alt="">
+      <img src="assets/dogum_gunu_notu.jpg" alt="">
+      <img src="assets/kirmizi_pasta.jpg" alt="">
+      <img src="assets/biz_1.jpg" alt="">
+      <img src="assets/el_optme.jpg" alt="">
+      <img src="assets/davette_biz.jpg" alt="">
+
+      <!-- döngü olsun diye tekrar -->
+      <img src="assets/ilk_bulusmamiz.jpg" alt="">
+      <img src="assets/dogum_gunu_notu.jpg" alt="">
+      <img src="assets/kirmizi_pasta.jpg" alt="">
+      <img src="assets/biz_1.jpg" alt="">
+      <img src="assets/el_optme.jpg" alt="">
+      <img src="assets/davette_biz.jpg" alt="">
     </div>
   </div>
 
-  <!-- Butonlar -->
+  <!-- SAĞ ALTTAN AÇILAN BUTONLAR -->
   <button class="letter-btn" id="openLetter" title="Mektubu aç">🔥 Mektup</button>
   <button class="letter-btn final-btn" id="openProposal" title="En son tıkla">💖 En son tıkla</button>
 
-  <!-- Mektup Modal -->
+  <!-- MEKTUP MODAL -->
   <div id="letterModal" class="modal" hidden>
     <div class="modal-content">
       <span class="close" id="closeLetter">&times;</span>
-      <img src="assets/mektup_kagit.png" alt="Mektup Kağıdı" class="letter-bg">
-      <p class="letter-text">Canım Şükran, doğum günün kutlu olsun. Seninle geçen her günüm
-      daha güzel. 🎂 💞</p>
+      <img src="assets/mektup_kagit.png" alt="Mektup kağıdı" class="letter-bg">
+      <div class="letter-text">
+        <h3>Şükran’ıma 💌</h3>
+        <p>Bu küçük siteyi sana hediye etmek istedim. Çünkü sen doğduğun için bugün güzel.</p>
+        <p>Ben Bekir Can, seninle olan her fotoğrafımın ayrı bir yeri var. Her gülüşünde ben biraz daha oradayım.</p>
+        <p>İyi ki varsın, iyi ki 3 Kasım’da doğmuşsun. 🎂</p>
+        <p>Seni seviyorum. 💖</p>
+      </div>
     </div>
   </div>
 
-  <!-- Evlenme Teklifi Modal -->
+  <!-- EVLENME TEKLİFİ MODAL -->
   <div id="proposalModal" class="modal" hidden>
     <div class="modal-content proposal-content">
       <span class="close" id="closeProposal">&times;</span>
       <h2>💍 Benimle evlenir misin Şükran’ım? 💕</h2>
-      <p>Bu siteyi senin için yaptım... Kalbim her zaman seninle. ❤️</p>
+      <p>Bu cümleyi buraya yazmak istedim çünkü bu sitede en özel yer burası olsun istedim.</p>
+      <p>“Evet” dersen bu sitedeki bütün kalpler senin için uçsun ❤️</p>
       <div id="heart-burst"></div>
     </div>
   </div>
+
 </body>
 </html>
