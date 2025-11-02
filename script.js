@@ -2,7 +2,7 @@
 const music = document.getElementById("music");
 const playBtn = document.getElementById("playBtn");
 
-if (playBtn && music) {
+if (music && playBtn) {
   playBtn.addEventListener("click", () => {
     if (music.paused) {
       music.play();
@@ -25,7 +25,7 @@ if (openLetter && letterModal) {
   });
 }
 
-if (closeLetter) {
+if (closeLetter && letterModal) {
   closeLetter.addEventListener("click", () => {
     letterModal.hidden = true;
   });
@@ -48,7 +48,7 @@ if (openProposal && proposalModal) {
   openProposal.addEventListener("click", () => {
     proposalModal.hidden = false;
 
-    // kalp yağdır
+    // kalpler
     for (let i = 0; i < 25; i++) {
       const heart = document.createElement("div");
       heart.classList.add("floating-heart");
@@ -61,7 +61,7 @@ if (openProposal && proposalModal) {
   });
 }
 
-if (closeProposal) {
+if (closeProposal && proposalModal) {
   closeProposal.addEventListener("click", () => {
     proposalModal.hidden = true;
   });
