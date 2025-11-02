@@ -8,9 +8,8 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- SABİT EMOJİ ARKA PLAN -->
+  <!-- ARKA PLAN EMOJİLER -->
   <div class="emoji-wall" aria-hidden="true">
-    <span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span>
     <span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span>
     <span>❤️</span><span>🎂</span><span>🐘</span><span>❤️</span><span>🎂</span><span>🐘</span>
   </div>
@@ -29,10 +28,10 @@
     </div>
   </div>
 
-  <!-- MÜZİK (raw linkle, çalışıyor olan) -->
+  <!-- MÜZİK -->
   <audio id="music" controls class="music-player">
     <source src="https://raw.githubusercontent.com/Bekircan168/dogum-gunu-sitesi/main/assets/iki-gozumun-cicegi.mp3" type="audio/mpeg">
-    Tarayıcın müziği otomatik çalmadıysa buradan başlatabilirsin ❤️
+    Tarayıcın otomatik çalamazsa buradan başlat ❤️
   </audio>
 
   <!-- FOTOĞRAF ŞERİDİ -->
@@ -44,8 +43,7 @@
       <img src="assets/biz_1.jpg" alt="">
       <img src="assets/el_optme.jpg" alt="">
       <img src="assets/davette_biz.jpg" alt="">
-
-      <!-- döngü olsun diye tekrar -->
+      <!-- tekrar -->
       <img src="assets/ilk_bulusmamiz.jpg" alt="">
       <img src="assets/dogum_gunu_notu.jpg" alt="">
       <img src="assets/kirmizi_pasta.jpg" alt="">
@@ -55,32 +53,31 @@
     </div>
   </div>
 
-  <!-- SAĞ ALTTAN AÇILAN BUTONLAR -->
-  <button class="letter-btn" id="openLetter" title="Mektubu aç">🔥 Mektup</button>
-  <button class="letter-btn final-btn" id="openProposal" title="En son tıkla">💖 En son tıkla</button>
+  <!-- SAĞ ALTTAN İKİ BUTON -->
+  <button class="letter-btn" id="openLetter">🔥 Mektup</button>
+  <button class="letter-btn final-btn" id="openProposal">💖 En son tıkla</button>
 
-  <!-- MEKTUP MODAL -->
+  <!-- 1) MEKTUP MODALI -->
   <div id="letterModal" class="modal" hidden>
-    <div class="modal-content">
+    <div class="modal-content letter-content">
       <span class="close" id="closeLetter">&times;</span>
-      <img src="assets/mektup_kagit.png" alt="Mektup kağıdı" class="letter-bg">
+      <img src="assets/mektup_kagit.png" class="letter-bg" alt="mektup">
       <div class="letter-text">
         <h3>Şükran’ıma 💌</h3>
-        <p>Bu küçük siteyi sana hediye etmek istedim. Çünkü sen doğduğun için bugün güzel.</p>
-        <p>Ben Bekir Can, seninle olan her fotoğrafımın ayrı bir yeri var. Her gülüşünde ben biraz daha oradayım.</p>
-        <p>İyi ki varsın, iyi ki 3 Kasım’da doğmuşsun. 🎂</p>
-        <p>Seni seviyorum. 💖</p>
+        <p>Canım Şükran, doğum günün kutlu olsun. Seninle geçen her günüm daha güzel.</p>
+        <p>Fotoğraflarımıza bakarken hep “iyi ki” dedim. İyi ki varsın, iyi ki hayatımdasın. 💕</p>
+        <p>— Bekir Can</p>
       </div>
     </div>
   </div>
 
-  <!-- EVLENME TEKLİFİ MODAL -->
+  <!-- 2) EVLENME TEKLİFİ MODALI -->
   <div id="proposalModal" class="modal" hidden>
     <div class="modal-content proposal-content">
       <span class="close" id="closeProposal">&times;</span>
-      <h2>💍 Benimle evlenir misin Şükran’ım? 💕</h2>
-      <p>Bu cümleyi buraya yazmak istedim çünkü bu sitede en özel yer burası olsun istedim.</p>
-      <p>“Evet” dersen bu sitedeki bütün kalpler senin için uçsun ❤️</p>
+      <h2>💍 Benimle evlenir misin Şükran’ım? 💖</h2>
+      <p>Bu siteyi senin için yaptım... Kalbim her zaman seninle. ❤️</p>
+      <p>“Evet” dersen, bundan sonrası hep biz olalım.</p>
       <div id="heart-burst"></div>
     </div>
   </div>
